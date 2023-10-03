@@ -11,25 +11,30 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Booking {@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private int bookingId;
+public class Booking {
 
-    @ManyToOne
-    @JoinColumn(name = "show_id")
-    private Show show;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "booking_id") // Specify the column name for bookingId
+    private int bookingId;
+
 
     @ManyToOne
     @JoinColumn(name = "seat_id")
     private Seat seat;
 
     @ManyToOne
+    @JoinColumn(name = "show_id")
+    private Show show;
+
+    @ManyToOne
     @JoinColumn(name = "cust_id")
     private Customer customer;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "booking_timestamp") // Specify the column name for timestamp
     private Date timestamp;
 
+    @Column(name = "total_amount") // Specify the column name for totalAmount
     private double totalAmount;
-
 }

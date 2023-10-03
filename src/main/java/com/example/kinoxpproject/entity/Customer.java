@@ -12,12 +12,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Customer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cust_id") // Specify the column name for custId
     private int custId;
 
+    @Column(name = "customer_name") // Specify the column name for name
     private String name;
+
+    @Column(name = "customer_email") // Specify the column name for email
     private String email;
+
+    @Column(name = "customer_phone") // Specify the column name for phone
     private String phone;
 
     @OneToMany(mappedBy = "customer")
