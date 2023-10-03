@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Show {
+public class Shows {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "show_id") // Specify the column name for showId

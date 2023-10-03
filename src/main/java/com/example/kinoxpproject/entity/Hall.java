@@ -28,7 +28,7 @@ public class Hall {
     private String layout;
 
     @OneToMany(mappedBy = "hall")
-    private List<Show> shows;
+    private List<Shows> shows;
 
     @OneToMany(mappedBy = "hall")
     private List<Seat> seats;
