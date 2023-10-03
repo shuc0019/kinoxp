@@ -14,7 +14,7 @@ import java.util.List;
 public class Hall {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long hallId;
+    private int hallId;
 
     private String hallName;
     private int capacity;

@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Booking {@Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long bookingId;
+private int bookingId;
 
     @ManyToOne
     @JoinColumn(name = "show_id")

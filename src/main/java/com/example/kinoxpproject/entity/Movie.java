@@ -15,7 +15,8 @@ import lombok.NoArgsConstructor;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long movieId;
+    private int movieId;
+
     private String name;
     private String description;
     private long duration;

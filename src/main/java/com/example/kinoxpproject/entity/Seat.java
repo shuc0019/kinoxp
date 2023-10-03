@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class Seat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long seatId;
+    private int seatId;
 
     private String seatNum;
     private String row;
